@@ -1,0 +1,60 @@
+body {
+    font-family: 'Cursive', sans-serif;
+    background-color: #f5f0e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: backgroundColorChange 10s infinite alternate;
+}
+
+.container {
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+    color: #ff69b4;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: pop 1.5s infinite;
+}
+
+.flowers {
+    width: 300px;
+    animation: float 4s ease-in-out infinite;
+    cursor: pointer;
+}
+
+#message {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 20px;
+    display: none;
+    background: linear-gradient(45deg, #ffcc00, #ff69b4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: typingEffect 5s steps(50) 1 normal forwards;
+}
+
+@keyframes backgroundColorChange {
+    0% { background-color: #f5f0e1; }
+    100% { background-color: #ffdfba; }
+}
+
+@keyframes pop {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes typingEffect {
+    from { width: 0; }
+    to { width: 100%; }
+}
